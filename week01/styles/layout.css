@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #3b3b3b;
+    color: white;
+    padding: 40px 20px;
+}
+footer {
+    text-align: center;
+}
+
+nav {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.middle-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    flex-grow: 1; /* Pushes the footer down to the bottom */
+}
+main {
+    background-color: #cccccc;
+    padding: 20px;
+}
+aside {
+    background-color: #ffffff;
+    padding: 20px;
+}
