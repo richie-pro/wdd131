@@ -111,11 +111,8 @@ hr {
 .location-title {
     text-align: center;
     margin: 15px 0 10px 0;
-    border-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     color: white;
-    background-color: #006669;
+
 }
 
 .location-details {
