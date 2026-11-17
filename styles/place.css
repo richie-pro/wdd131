@@ -93,11 +93,16 @@ main {
     margin: 0;
 }
 
-.weather-icon {
+.weather h2::after {
+    content: "";
     display: block;
     width: 4rem;
     height: 4rem;
-    margin: 0 auto 1rem;
+    margin: 0.75rem auto 0;
+    background-image: url("../images/weather-partly-cloudy.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 footer {
