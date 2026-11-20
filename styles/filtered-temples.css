@@ -29,21 +29,38 @@ main > h1 {
     font-size: 1rem;
 }
 
-main figure {
+#temple-cards {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+#temple-cards figure {
     margin: 0;
 }
 
-main figure img {
+#temple-cards img {
     display: block;
     width: 100%;
     aspect-ratio: 1.6;
     object-fit: cover;
 }
 
-main figcaption {
+#temple-cards figcaption {
     padding: 0.25rem;
+    font-size: 0.85rem;
+}
+
+#temple-cards h2 {
+    margin: 0.25rem 0;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 1rem;
+}
+
+#temple-cards p {
+    margin: 0.2rem 0;
+    text-align: center;
 }
 
 .header {

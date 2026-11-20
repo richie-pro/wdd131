@@ -105,3 +105,79 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/800x500/2-Barranquilla-Columblia-Temple-2135201.jpg"
   }
 ];
+
+const templeCards = document.getElementById("temple-cards");
+const galleryTitle = document.getElementById("gallery-title");
+const filterLinks = document.querySelectorAll("[data-filter]");
+
+function renderTempleCards(templeList) {
+    templeCards.replaceChildren();
+
+    templeList.forEach(function (temple) {
+        const card = document.createElement("figure");
+        const image = document.createElement("img");
+        const caption = document.createElement("figcaption");
+        const name = document.createElement("h2");
+        const location = document.createElement("p");
+        const dedication = document.createElement("p");
+        const area = document.createElement("p");
+
+        image.src = temple.imageUrl;
+        image.alt = `Photo of the ${temple.templeName} Temple`;
+        image.loading = "lazy";
+        name.textContent = temple.templeName;
+        location.textContent = `Location: ${temple.location}`;
+        dedication.textContent = `Dedicated: ${temple.dedicated}`;
+        area.textContent = `Area: ${temple.area.toLocaleString()} square feet`;
+
+        caption.append(name, location, dedication, area);
+        card.append(image, caption);
+        templeCards.append(card);
+    });
+}
+
+function getDedicationYear(temple) {
+    return Number(temple.dedicated.split(",")[0]);
+}
+
+const templeFilters = {
+    home: function () {
+        return temples;
+    },
+    old: function () {
+        return temples.filter(function (temple) {
+            return getDedicationYear(temple) < 1900;
+        });
+    },
+    new: function () {
+        return temples.filter(function (temple) {
+            return getDedicationYear(temple) > 2000;
+        });
+    },
+    large: function () {
+        return temples.filter(function (temple) {
+            return temple.area > 90000;
+        });
+    },
+    small: function () {
+        return temples.filter(function (temple) {
+            return temple.area < 10000;
+        });
+    }
+};
+
+filterLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const filterName = link.dataset.filter;
+        renderTempleCards(templeFilters[filterName]());
+        galleryTitle.textContent = link.textContent;
+
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            setNavigationOpen(false);
+        }
+    });
+});
+
+renderTempleCards(temples);
