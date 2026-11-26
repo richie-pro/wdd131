@@ -1,0 +1,255 @@
+:root {
+  --navy: #18324a;
+  --orange: #f47c20;
+  --court-blue: #2d78a3;
+  --cream: #f7f2e8;
+  --charcoal: #232323;
+  --white: #ffffff;
+  --heading-font: "Barlow Condensed", sans-serif;
+  --body-font: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--charcoal);
+  background: var(--cream);
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
+
+.site-header,
+footer {
+  color: var(--white);
+  background: var(--navy);
+  text-align: center;
+}
+
+.site-header {
+  padding: 2.25rem 1rem;
+  border-bottom: 8px solid var(--orange);
+}
+
+.site-header h1 {
+  margin: 0.15rem 0;
+  color: var(--orange);
+  font-family: var(--heading-font);
+  font-size: clamp(3rem, 10vw, 5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.site-header p {
+  margin: 0.35rem 0 0;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  margin: 1.25rem 0;
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+  background: var(--white);
+  border-left: 5px solid var(--orange);
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgb(24 50 74 / 10%);
+}
+
+h2,
+h3 {
+  font-family: var(--heading-font);
+  color: var(--navy);
+}
+
+h2 {
+  margin: 0 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--court-blue);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.scenarios {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.scenarios dt {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.scenarios dd {
+  margin: 0 0 0.9rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--orange);
+}
+
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.swatch {
+  min-height: 150px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgb(35 35 35 / 20%);
+  border-radius: 4px;
+}
+
+.swatch span {
+  font-size: 0.85rem;
+}
+
+.swatch-navy {
+  color: var(--white);
+  background: var(--navy);
+}
+
+.swatch-orange {
+  color: var(--charcoal);
+  background: var(--orange);
+}
+
+.swatch-blue {
+  color: var(--white);
+  background: var(--court-blue);
+}
+
+.swatch-cream {
+  background: var(--cream);
+}
+
+.swatch-charcoal {
+  color: var(--white);
+  background: var(--charcoal);
+}
+
+.type-samples {
+  display: grid;
+  gap: 1rem;
+}
+
+.type-samples article {
+  padding: 1rem;
+  background: var(--cream);
+  border-radius: 4px;
+}
+
+.type-samples h3 {
+  margin: 0;
+  font-size: clamp(2.25rem, 8vw, 4rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.type-label {
+  color: var(--court-blue);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.wireframe-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.wireframe {
+  padding: 0.75rem;
+  background: #edf1f3;
+  border: 2px solid var(--navy);
+  border-radius: 4px;
+}
+
+.mobile-wireframe {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.wire-block {
+  margin-bottom: 0.55rem;
+  padding: 0.65rem;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px dashed var(--court-blue);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.header-block {
+  min-height: 50px;
+  background: #d7e3ea;
+}
+
+.nav-block,
+.footer-block {
+  min-height: 32px;
+  background: #dfe6e8;
+}
+
+.hero-block {
+  min-height: 140px;
+  background: #f5cba8;
+  display: grid;
+  place-items: center;
+}
+
+.content-block {
+  min-height: 85px;
+  display: grid;
+  place-items: center;
+}
+
+.wire-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem;
+}
+
+.wire-columns .wire-block {
+  margin-bottom: 0.55rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem clamp(1rem, 5vw, 3rem);
+  border-top: 6px solid var(--orange);
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (min-width: 700px) {
+  main {
+    padding: 2rem;
+  }
+
+  .type-samples {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wireframe-grid {
+    grid-template-columns: minmax(220px, 0.7fr) minmax(360px, 1.3fr);
+  }
+}

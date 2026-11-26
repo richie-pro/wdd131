@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Week 5 site plan for Bulawayo Hoops, a basketball community and court finder website for Bulawayo.">
+  <meta name="author" content="Richie Mpofu">
+  <title>Bulawayo Hoops | Week 5 Site Plan</title>
+  <link rel="stylesheet" href="styles/siteplan.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">WDD 131 - Web Frontend Development I</p>
+    <h1>Bulawayo Hoops</h1>
+    <p>Week 5 Site Plan</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Site Name &amp; Identity</h2>
+      <p><strong>Bulawayo Hoops</strong> is the proposed name. A fitting domain idea is <strong>bulawayahoops.org</strong> or <strong>bulawayahoops.com</strong>.</p>
+      <p>This name is direct, energetic, and local: it tells basketball players in Bulawayo exactly what the site is for while representing the city's growing hoops community.</p>
+    </section>
+
+    <section>
+      <h2>Site Purpose</h2>
+      <p>Bulawayo Hoops will help players discover local basketball courts, learn pickup-game etiquette, and check in to planned runs.</p>
+      <ul>
+        <li>A searchable court directory with locations, facilities, and local notes.</li>
+        <li>Clear pickup etiquette covering fairness, safety, and game rotation.</li>
+        <li>Interactive run check-ins that show who is attending and what a player needs to bring.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>User Scenarios</h2>
+      <dl class="scenarios">
+        <dt>Where can I find an outdoor court near my neighbourhood?</dt>
+        <dd>The court directory will provide locations, neighbourhoods, court features, and practical directions.</dd>
+
+        <dt>How do I join or organize a pickup run?</dt>
+        <dd>Run listings will show the venue and time, while check-ins will let players announce attendance and share extra details.</dd>
+
+        <dt>What rules should I follow at a new court?</dt>
+        <dd>A pickup etiquette guide will answer common questions about calling next, rotations, skill levels, equipment, and respect.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Color Schema</h2>
+      <p>The palette uses court-inspired navy and orange, balanced with warm neutral shades for readable content.</p>
+      <div class="swatch-grid" aria-label="Website color palette">
+        <article class="swatch swatch-navy">
+          <strong>Deep Navy</strong>
+          <span>#18324A</span>
+          <span>Headings and header</span>
+        </article>
+        <article class="swatch swatch-orange">
+          <strong>Basketball Orange</strong>
+          <span>#F47C20</span>
+          <span>Actions and accents</span>
+        </article>
+        <article class="swatch swatch-blue">
+          <strong>Court Blue</strong>
+          <span>#2D78A3</span>
+          <span>Links and highlights</span>
+        </article>
+        <article class="swatch swatch-cream">
+          <strong>Warm Cream</strong>
+          <span>#F7F2E8</span>
+          <span>Page background</span>
+        </article>
+        <article class="swatch swatch-charcoal">
+          <strong>Charcoal</strong>
+          <span>#232323</span>
+          <span>Body text</span>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <div class="type-samples">
+        <article>
+          <p class="type-label">Heading font: Barlow Condensed, bold</p>
+          <h3>Find a Court. Join a Run.</h3>
+        </article>
+        <article>
+          <p class="type-label">Body font: Roboto, regular</p>
+          <p>Bulawayo Hoops makes it easier for local players to discover courts, organize games, and build a welcoming basketball community.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Wireframes</h2>
+      <div class="wireframe-grid">
+        <article>
+          <h3>Mobile - index.html</h3>
+          <div class="wireframe mobile-wireframe" aria-label="Mobile page wireframe">
+            <div class="wire-block header-block">Header &amp; logo</div>
+            <div class="wire-block nav-block">Navigation menu</div>
+            <div class="wire-block hero-block">Featured run / headline</div>
+            <div class="wire-block content-block">Court directory</div>
+            <div class="wire-block content-block">Pickup etiquette</div>
+            <div class="wire-block content-block">Community check-ins</div>
+            <div class="wire-block footer-block">Footer</div>
+          </div>
+        </article>
+
+        <article>
+          <h3>Desktop - index.html</h3>
+          <div class="wireframe desktop-wireframe" aria-label="Desktop page wireframe">
+            <div class="wire-block header-block">Header, logo &amp; full navigation</div>
+            <div class="wire-block hero-block">Featured run / headline</div>
+            <div class="wire-columns">
+              <div class="wire-block content-block">Court directory</div>
+              <div class="wire-block content-block">Pickup etiquette</div>
+            </div>
+            <div class="wire-block content-block">Community check-ins</div>
+            <div class="wire-block footer-block">Footer</div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Richie Mpofu | WDD 131</p>
+    <p>© <span id="year"></span> Bulawayo Hoops</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
