@@ -118,6 +118,13 @@ h2 {
   font-size: 0.85rem;
 }
 
+.swatch h3 {
+  margin: 0 0 0.25rem;
+  color: inherit;
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+
 .swatch-navy {
   color: var(--white);
   background: var(--navy);
