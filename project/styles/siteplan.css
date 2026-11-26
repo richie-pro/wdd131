@@ -1,7 +1,7 @@
 :root {
   --navy: #18324a;
   --orange: #f47c20;
-  --court-blue: #2d78a3;
+  --court-blue: #22668a;
   --cream: #f7f2e8;
   --charcoal: #232323;
   --white: #ffffff;
@@ -9,7 +9,7 @@
   --body-font: "Roboto", sans-serif;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -224,9 +224,6 @@ h2 {
   gap: 0.55rem;
 }
 
-.wire-columns .wire-block {
-  margin-bottom: 0.55rem;
-}
 
 footer {
   display: flex;
