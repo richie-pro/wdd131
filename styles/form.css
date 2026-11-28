@@ -90,8 +90,8 @@ main {
 
 .rating {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 0.25rem;
     margin-bottom: 0.75rem;
 }
