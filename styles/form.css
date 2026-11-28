@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --header: #243447;
+    --accent: #006669;
+    --soft: #eef3f5;
+    --border: #aab5bb;
+    --text: #1f2933;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: var(--text);
+    background: #dfe7ea;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+footer {
+    background: var(--header);
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 0.35rem 1rem;
+}
+
+.form-title {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+main {
+    width: min(92%, 620px);
+    margin: 1.25rem auto;
+    flex: 1;
+}
+
+.review-form fieldset {
+    margin: 0;
+    padding: 1.25rem;
+    border: 1px solid #9aa4a8;
+    border-radius: 6px;
+    background: var(--soft);
+}
+
+.review-form legend {
+    padding: 0 0.5rem;
+    color: var(--accent);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.review-form label,
+.field-label {
+    display: block;
+    margin: 0.9rem 0 0.35rem;
+    font-weight: 700;
+}
+
+.review-form label span,
+.field-label span {
+    font-weight: 400;
+}
+
+.review-form select,
+.review-form input[type="date"],
+.review-form input[type="text"],
+.review-form textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.55rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: white;
+    color: var(--text);
+}
+
+.review-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.rating input {
+    position: absolute;
+    opacity: 0;
+}
+
+.rating label {
+    display: grid;
+    min-width: 46px;
+    min-height: 44px;
+    margin: 0;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: white;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.rating input:checked + label {
+    border: 2px solid var(--accent);
+    background: #d7ecec;
+}
+
+.features {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.features label {
+    margin: 0.15rem 0;
+    font-weight: 400;
+}
+
+.features input {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.35rem;
+    vertical-align: middle;
+}
+
+.review-form input[type="submit"] {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 1.25rem;
+    border: 0;
+    border-radius: 4px;
+    background: var(--accent);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.review-form input[type="submit"]:hover {
+    background: #004f52;
+}
+
+.confirmation {
+    padding: 2.5rem 1.25rem;
+    border: 1px solid #9aa4a8;
+    border-radius: 6px;
+    background: var(--soft);
+    text-align: center;
+}
+
+.confirmation h1 {
+    color: var(--accent);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+footer {
+    padding: 0.5rem 1rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}

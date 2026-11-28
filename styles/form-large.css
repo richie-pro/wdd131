@@ -1,0 +1,17 @@
+@media (min-width: 700px) {
+    main {
+        width: min(80%, 700px);
+    }
+
+    .review-form fieldset {
+        padding: 1.5rem 2rem 2rem;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-form input[type="submit"] {
+        width: 220px;
+    }
+}
