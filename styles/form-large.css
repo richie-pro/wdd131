@@ -7,10 +7,6 @@
         padding: 1.5rem 2rem 2rem;
     }
 
-    .features {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .review-form input[type="submit"] {
         width: 220px;
     }
