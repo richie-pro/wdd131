@@ -137,9 +137,10 @@ main {
 }
 
 .review-form input[type="submit"] {
+    display: block;
     width: 100%;
     min-height: 46px;
-    margin-top: 1.25rem;
+    margin: 1.25rem auto 0;
     border: 0;
     border-radius: 4px;
     background: var(--accent);
